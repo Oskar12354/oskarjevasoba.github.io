@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore.js"></script>
+    </head>
+    <body>
+        <div id="main">
+            <div id="title">
+                <h1>
+                    Moja Soba
+                </h1>
+            </div>
+            <div id="form">
+                <form action="upload.php">
+                    
+                    <label for="ponedeljek">Ponedeljek: </label>
+                    <input type="checkbox" id="ponedeljek" name="ponedeljek">,<input type="checkbox" id="ponedeljek1" name="ponedeljek1"><br>
+                    <label for="torek">Torek:</label>
+                    <input type="checkbox" id="torek" name="torek">,<input type="checkbox" id="torek1" name="torek1"><br>
+                    <label for="sreda">Sreda:</label>
+                    <input type="checkbox" id="sreda" name="sreda">,<input type="checkbox" id="sreda1" name="sreda1"><br>
+                    <label for="cetrtek">Četrtek:</label>
+                    <input type="checkbox" id="cetrtek" name="cetrtek">,<input type="checkbox" id="cetrtek1" name="cetrtek1"><br>
+                    <label for="petek">Petek:</label>
+                    <input type="checkbox" id="petek" name="petek">,<input type="checkbox" id="petek1" name="petek1"><br>
+                    <label for="sobota">Sobota:</label>
+                    <input type="checkbox" id="sobota" name="sobota">,<input type="checkbox" id="sobota1" name="sobota1"><br>
+                    <label for="nedelja">Nedelja:</label>
+                    <input type="checkbox" id="nedelja" name="nedelja">,<input type="checkbox" id="nedelja1" name="nedelja1"><br>
+                    <label for="opomba">Opombe (napiši za vse dni):</label>
+                    <input type="text" id="opomba" name="opomba"><br>
+                    <label for="podpis" class="">Podpis: </label>
+                    <input type="text" id="podpis" name="podpis"><br>
+                    <input type="submit" value="Upload">
+                    <button type="button" onclick="saveData()" id="save">Shrani</button>
+                    <button type="button" onclick="saveToFile()" id="savefile">Shrani v datoteko</button>
+                    <button type="button" onclick="resetData()" id="reset">Resetiraj</button>
+                </form>
+            </div>
+        </div>
+        
+    </body>
+</html>
